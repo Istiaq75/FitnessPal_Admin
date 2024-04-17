@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "419419407699",
+    "project_id": "fitness-pal-67f0a",
+    "storage_bucket": "fitness-pal-67f0a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:419419407699:android:af1bf57434f8f7efffcda6",
+        "android_client_info": {
+          "package_name": "com.fitenesspal.admin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGUeNJMQsEyii2prgLGEG9rIosqUZ7-5Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
