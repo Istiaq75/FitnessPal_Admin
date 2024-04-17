@@ -28,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
               MaterialPageRoute(builder: (_) => const StartedView()),
               (route) => false);
         } else {
-          if (user.currentUser?.email == "sdshuvo4119@gmail.com") {
+          if (user.currentUser?.email == "istiaq66@gmail.com") {
             Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(builder: (_) => BottomNavBar()),
