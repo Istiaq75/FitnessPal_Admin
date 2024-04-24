@@ -1,18 +1,17 @@
-// ignore_for_file: prefer_const_constructors, use_build_context_synchronously
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fitness/common/colo_extension.dart';
+import 'package:fitness/components/round_button.dart';
+import 'package:fitness/components/round_textfield.dart';
+import 'package:fitness/view/Authentication/ForgotScreen/forgot_screen.dart';
+import 'package:fitness/view/Authentication/RegisterScreen/signup_view.dart';
+import 'package:fitness/view/dashboard/navigator.dart';
+import 'package:fitness/view/home/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:top_snackbar_flutter/custom_snack_bar.dart';
 import 'package:top_snackbar_flutter/top_snack_bar.dart';
 
-import '../../../components/round_button.dart';
-import '../../../components/round_textfield.dart';
-import '../../dashboard/navigator.dart';
-import '../../home/home_view.dart';
-import '../ForgotScreen/forgot_screen.dart';
-import '../RegisterScreen/signup_view.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -87,8 +86,8 @@ class _LoginViewState extends State<LoginView> {
                               });
                             },
                             icon: isPasswordSecured
-                                ? Icon(Icons.visibility)
-                                : Icon(Icons.visibility_off)),
+                                ? const Icon(Icons.visibility)
+                                : const Icon(Icons.visibility_off)),
                         icon: "assets/img/lock.png",
                       ),
                       SizedBox(
@@ -122,8 +121,8 @@ class _LoginViewState extends State<LoginView> {
                           onPressed: () async {
                             if (_formState.currentState!.validate()) {
                               if (_emailController.text ==
-                                      "sdshuvo4119@gmail.com" &&
-                                  _passwordController.text == "123456") {
+                                      "istiaq66@gmail.com" &&
+                                  _passwordController.text == "12345678") {
                                 try {
                                   await _auth
                                       .signInWithEmailAndPassword(
@@ -132,14 +131,14 @@ class _LoginViewState extends State<LoginView> {
                                       .then((value) {
                                     showTopSnackBar(
                                       Overlay.of(context),
-                                      CustomSnackBar.success(
+                                      const CustomSnackBar.success(
                                         message: "Login Successfully",
                                       ),
                                     );
                                     Navigator.pushAndRemoveUntil(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (_) => BottomNavBar()),
+                                            builder: (_) => const BottomNavBar()),
                                         (route) => false);
                                   });
                                 } catch (e) {
@@ -159,7 +158,7 @@ class _LoginViewState extends State<LoginView> {
                                       .then((value) {
                                     showTopSnackBar(
                                       Overlay.of(context),
-                                      CustomSnackBar.success(
+                                      const CustomSnackBar.success(
                                         message: "Login Successfully",
                                       ),
                                     );
