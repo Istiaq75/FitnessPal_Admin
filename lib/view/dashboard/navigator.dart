@@ -1,14 +1,15 @@
-// ignore_for_file: use_key_in_widget_constructors, library_private_types_in_public_api
 
+import 'package:fitness/view/equipments/equipments_screen.dart';
+import 'package:fitness/view/home/home_screen_g.dart';
+import 'package:fitness/view/income_expenses/inc_exp_screen.dart';
+import 'package:fitness/view/members/members_screen.dart';
+import 'package:fitness/view/trainers/trainers_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../equipments/equipments_screen.dart';
-import '../home/home_screen_g.dart';
-import '../income_expenses/inc_exp_screen.dart';
-import '../members/members_screen.dart';
-import '../trainers/trainers_screen.dart';
 
 class BottomNavBar extends StatefulWidget {
+  const BottomNavBar({super.key});
+
   @override
   _BottomNavBarState createState() => _BottomNavBarState();
 }

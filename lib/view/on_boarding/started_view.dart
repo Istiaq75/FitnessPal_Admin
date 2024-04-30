@@ -1,11 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fitness/common/colo_extension.dart';
-import 'package:fitness/view/on_boarding/on_boarding_view.dart';
+import 'package:fitness/view/Authentication/LoginScreen/login_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../components/round_button.dart';
-import '../Authentication/RegisterScreen/signup_view.dart';
+
 
 class StartedView extends StatefulWidget {
   const StartedView({super.key});
@@ -80,7 +80,7 @@ class _StartedViewState extends State<StartedView> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => SignUpView()));
+                                builder: (context) => const LoginView()));
                       } else {
                         //Change Color
                         setState(() {

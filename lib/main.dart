@@ -26,7 +26,6 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
               primaryColor: TColor.primaryColor1, fontFamily: "Poppins"),
           home: const SplashScreen(),
-          // home: Excercise(),
         );
       },
     );

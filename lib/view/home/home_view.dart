@@ -1,20 +1,22 @@
-// ignore_for_file: use_key_in_widget_constructors, avoid_function_literals_in_foreach_calls, prefer_const_constructors, unnecessary_this, prefer_const_literals_to_create_immutables, library_prefixes, deprecated_member_use
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:fitness/common/colo_extension.dart';
+import 'package:fitness/components/Section.dart';
+import 'package:fitness/components/daily_tip.dart';
+import 'package:fitness/components/mage_card_with_internal.dart';
+import 'package:fitness/components/main_card_programs.dart';
+import 'package:fitness/view/profile/profile_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../common/colo_extension.dart';
-import '../../components/daily_tip.dart';
-import '../../components/image_card_with_internal.dart';
-import '../../components/Section.dart';
-import '../../components/main_card_programs.dart';
 import 'package:url_launcher/url_launcher.dart' as UrlLauncher;
 
-import '../profile/profile_view.dart';
+
 
 class HomeView extends StatefulWidget {
+  const HomeView({super.key});
+
   @override
   State<HomeView> createState() => _HomeViewState();
 }
@@ -29,7 +31,7 @@ class _HomeViewState extends State<HomeView> {
     List<Widget> sliderList = [];
 
     // Process data.docs and create a list of widgets
-    data.docs.forEach((doc) {
+    for (var doc in data.docs) {
       // Extract relevant data from the document and create a Widget
       // Adjust the logic based on your data structure
       var image = doc['image'];
@@ -50,7 +52,7 @@ class _HomeViewState extends State<HomeView> {
 
       // Add the widget to the list
       sliderList.add(widget);
-    });
+    }
 
     return sliderList;
   }
@@ -64,7 +66,7 @@ class _HomeViewState extends State<HomeView> {
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
             child: Column(
-              children: <Widget>[
+              children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -118,7 +120,7 @@ class _HomeViewState extends State<HomeView> {
                   future: getSlider(context),
                   builder: (context, snapshot) {
                     if (snapshot.connectionState == ConnectionState.waiting) {
-                      return CircularProgressIndicator(color: Colors.black);
+                      return const CircularProgressIndicator(color: Colors.black);
                     } else if (snapshot.hasError) {
                       return Text('Error: ${snapshot.error}');
                     } else {

@@ -10,6 +10,8 @@ import 'Authentication/LoginScreen/login_view.dart';
 
 
 class AppDrawer extends StatefulWidget {
+  const AppDrawer({super.key});
+
   @override
   _AppDrawerState createState() => _AppDrawerState();
 }
@@ -25,7 +27,7 @@ class _AppDrawerState extends State<AppDrawer> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 250.0,
       child: Drawer(
         child: Container(
@@ -39,7 +41,7 @@ class _AppDrawerState extends State<AppDrawer> {
                 margin: const EdgeInsets.only(top: 25.0),
                 width: 100.0,
                 height: 100.0,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
                     image: NetworkImage(
@@ -48,7 +50,7 @@ class _AppDrawerState extends State<AppDrawer> {
                   ),
                 ),
               ),
-              SizedBox(height: 10.0),
+              const SizedBox(height: 10.0),
               Expanded(
                 child: Column(
                   children: [
@@ -79,20 +81,20 @@ class _AppDrawerState extends State<AppDrawer> {
                   ],
                 ),
               ),
-              SizedBox(height: 10.0),
+              const SizedBox(height: 10.0),
               Text(
                 FirebaseAuth.instance.currentUser!.email.toString(),
-                style: TextStyle(
+                style: const TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
                     fontSize: 15.0),
               ),
-              SizedBox(height: 10.0),
-              Text('Update Your Details in Settings!'),
-              SizedBox(height: 10.0),
-              Divider(color: Colors.black),
+              const SizedBox(height: 10.0),
+              const Text('Update Your Details in Settings!'),
+              const SizedBox(height: 10.0),
+              const Divider(color: Colors.black),
               IconButton(
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.settings,
                     color: Colors.white,
                   ),
@@ -103,14 +105,14 @@ class _AppDrawerState extends State<AppDrawer> {
                             content: Column(
                               children: <Widget>[
                                 TextField(
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                     icon: Icon(Icons.person),
                                     labelText: 'Your F-Name',
                                   ),
                                   controller: nameController,
                                 ),
                                 TextField(
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                     icon: Icon(Icons.home_rounded),
                                     labelText: 'Your L-name',
                                   ),
@@ -137,7 +139,7 @@ class _AppDrawerState extends State<AppDrawer> {
                                   descriptionController.clear(),
                                   Navigator.pop(context)
                                 },
-                                child: Text(
+                                child: const Text(
                                   'UPDATE',
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 20),
@@ -145,16 +147,16 @@ class _AppDrawerState extends State<AppDrawer> {
                               )
                             ]).show()
                       }),
-              Text(
+              const Text(
                 'Settings',
                 style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 12.0),
               ),
-              Divider(color: Colors.black),
+              const Divider(color: Colors.black),
               IconButton(
-                icon: Icon(
+                icon: const Icon(
                   Icons.logout,
                   color: Colors.white,
                 ),
@@ -163,7 +165,7 @@ class _AppDrawerState extends State<AppDrawer> {
                   FirebaseAuth.instance.signOut(),
                   Navigator.pushAndRemoveUntil(
                       context,
-                      MaterialPageRoute(builder: (_) => LoginView()),
+                      MaterialPageRoute(builder: (_) => const LoginView()),
                       (route) => false)
                 },
               ),
