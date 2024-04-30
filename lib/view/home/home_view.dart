@@ -7,7 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../common/colo_extension.dart';
 import '../../components/daily_tip.dart';
-import '../../components/mage_card_with_internal.dart';
+import '../../components/image_card_with_internal.dart';
 import '../../components/Section.dart';
 import '../../components/main_card_programs.dart';
 import 'package:url_launcher/url_launcher.dart' as UrlLauncher;
