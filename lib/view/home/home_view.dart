@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fitness/common/colo_extension.dart';
 import 'package:fitness/components/Section.dart';
 import 'package:fitness/components/daily_tip.dart';
-import 'package:fitness/components/mage_card_with_internal.dart';
+import 'package:fitness/components/image_card_with_internal.dart';
 import 'package:fitness/components/main_card_programs.dart';
 import 'package:fitness/view/profile/profile_view.dart';
 import 'package:flutter/material.dart';
@@ -112,7 +112,7 @@ class _HomeViewState extends State<HomeView> {
                             ),
                           );
                         },
-                        icon: Icon(Icons.person))
+                        icon: const Icon(Icons.person))
                   ],
                 ),
                 MainCardPrograms(), // MainCard

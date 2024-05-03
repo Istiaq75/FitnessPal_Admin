@@ -17,22 +17,9 @@ class ViewExpense extends StatefulWidget {
 }
 
 class _ViewExpenseState extends State<ViewExpense> {
-  late DatabaseReference _expenseRef;
   late DateTime date;
   final fireStore = FirebaseFirestore.instance;
 
-  // @override
-  // void initState() {
-  //   date = DateTime.now();
-  //   String ndate = DateFormat('yyyy-MM-dd').format(date).toString();
-  //   final FirebaseDatabase database = FirebaseDatabase();
-  //   _expenseRef = database
-  //       .reference()
-  //       .child(FirebaseAuth.instance.currentUser!.uid)
-  //       .child('Expense')
-  //       .child(ndate);
-  //   super.initState();
-  // }
 
   @override
   Widget build(BuildContext context) {

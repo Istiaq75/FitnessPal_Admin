@@ -1,6 +1,10 @@
 // ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, library_private_types_in_public_api, sized_box_for_whitespace, unnecessary_brace_in_string_interps
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:fitness/view/home/widgets/add_workouts.dart';
+import 'package:fitness/view/home/widgets/view_workouts.dart';
+import 'package:fitness/view/income_expenses/add_income.dart';
+import 'package:fitness/view/income_expenses/view_income.dart';
 import 'package:flutter/material.dart';
 import '../../common/colo_extension.dart';
 import '../drawer.dart';
@@ -23,6 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
       drawer: AppDrawer(),
       body: SafeArea(
         child: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
           child: Column(
             children: [
               Container(
@@ -448,6 +453,106 @@ class _HomeScreenState extends State<HomeScreen> {
                   // StatsGrid('Equipments', '1',
                   //     'assets/images/dumbbell_gym_fitness_exercise-512.png'),
                 ],
+              ),
+              SizedBox(height: 50,),
+              Center(child:
+              Text(
+                'Add Manual Workouts',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20.0),
+              ), ),
+              SizedBox(height: 20,),
+              Card(
+                elevation: 5,
+                margin: EdgeInsets.all(8.0),
+                color: Colors.grey[350],
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                child: Column(
+                  children: [
+                    Image.asset(
+                      'assets/images/gym_coach_trainer_fitness-512.png',
+                      width: 84.0,
+                    ),
+                    Text(
+                      'Add Workout tutorials',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20.0),
+                    ),
+                    ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor:
+                        MaterialStateProperty.all(TColor.secondaryColor),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ViewWorkouts(),
+                          ),
+                        );
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const <Widget>[
+                          Icon(
+                            Icons.list_alt,
+                            color: Colors.white,
+                            size: 40.0,
+                          ),
+                          Text(
+                            'View Workouts',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w700,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor:
+                        MaterialStateProperty.all(TColor.secondaryColor),
+                      ),
+                      // shape: RoundedRectangleBorder(
+                      //   borderRadius: BorderRadius.circular(18.0),
+                      // ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => AddWorkouts(),
+                          ),
+                        );
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const <Widget>[
+                          Icon(
+                            Icons.add_circle_outline,
+                            color: Colors.white,
+                            size: 40.0,
+                          ),
+                          Text(
+                            'Add New Workout',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w700,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),

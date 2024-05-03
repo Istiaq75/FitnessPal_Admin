@@ -7,7 +7,7 @@ class MakeInput extends StatelessWidget {
   final bool? obscureText;
   final TextEditingController? controllerID;
   
-  MakeInput({this.label, this.obscureText, this.controllerID});
+  const MakeInput({super.key, this.label, this.obscureText, this.controllerID});
   @override
   Widget build(BuildContext context) {
     return Column(
