@@ -1,19 +1,20 @@
-// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, sized_box_for_whitespace, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 
 class BottomBar extends StatelessWidget {
+  const BottomBar({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
-      shape: CircularNotchedRectangle(),
+      shape: const CircularNotchedRectangle(),
       notchMargin: 6.0,
       color: Colors.transparent,
       elevation: 9.0,
       clipBehavior: Clip.antiAlias,
       child: Container(
         height: 50,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(5),
             topRight: Radius.circular(5),
@@ -23,7 +24,7 @@ class BottomBar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(
+            SizedBox(
               height: 50.0,
               width: MediaQuery.of(context).size.width /2 - 40.0,
               child: Row(
@@ -34,7 +35,7 @@ class BottomBar extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
+            SizedBox(
               height: 50.0,
               width: MediaQuery.of(context).size.width /2 - 40.0,
               child: Row(

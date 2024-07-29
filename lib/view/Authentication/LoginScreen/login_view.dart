@@ -120,27 +120,15 @@ class _LoginViewState extends State<LoginView> {
                           title: "Login",
                           onPressed: () async {
                             if (_formState.currentState!.validate()) {
-                              if (_emailController.text ==
-                                      "istiaq66@gmail.com" &&
-                                  _passwordController.text == "12345678") {
-                                try {
-                                  await _auth
-                                      .signInWithEmailAndPassword(
-                                          email: _emailController.text,
-                                          password: _passwordController.text)
-                                      .then((value) {
-                                    showTopSnackBar(
-                                      Overlay.of(context),
-                                      const CustomSnackBar.success(
-                                        message: "Login Successfully",
-                                      ),
+                              if (_emailController.text == "istiaq66@gmail.com" && _passwordController.text == "12345678") {
+                                try { await
+                                _auth.signInWithEmailAndPassword(
+                                    email: _emailController.text,
+                                    password: _passwordController.text)
+                                    .then((value) {
+                                    showTopSnackBar(Overlay.of(context),const CustomSnackBar.success(message: "Login Successfully",),
                                     );
-                                    Navigator.pushAndRemoveUntil(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (_) => const BottomNavBar()),
-                                        (route) => false);
-                                  });
+                                    Navigator.pushAndRemoveUntil(context,MaterialPageRoute(builder: (_) => const BottomNavBar()),(route) => false);});
                                 } catch (e) {
                                   showTopSnackBar(
                                     Overlay.of(context),
@@ -148,35 +136,35 @@ class _LoginViewState extends State<LoginView> {
                                       message: e.toString(),
                                     ),
                                   );
-                                }
-                              } else {
-                                try {
-                                  await _auth
-                                      .signInWithEmailAndPassword(
-                                          email: _emailController.text,
-                                          password: _passwordController.text)
-                                      .then((value) {
-                                    showTopSnackBar(
-                                      Overlay.of(context),
-                                      const CustomSnackBar.success(
-                                        message: "Login Successfully",
-                                      ),
-                                    );
-                                    Navigator.pushAndRemoveUntil(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (_) => HomeView()),
-                                        (route) => false);
-                                  });
-                                } catch (e) {
-                                  showTopSnackBar(
-                                    Overlay.of(context),
-                                    CustomSnackBar.error(
-                                      message: e.toString(),
-                                    ),
-                                  );
-                                }
-                              }
+                                }}
+                              //else {
+                              //   try {
+                              //     await _auth
+                              //         .signInWithEmailAndPassword(
+                              //             email: _emailController.text,
+                              //             password: _passwordController.text)
+                              //         .then((value) {
+                              //       showTopSnackBar(
+                              //         Overlay.of(context),
+                              //         const CustomSnackBar.success(
+                              //           message: "Login Successfully",
+                              //         ),
+                              //       );
+                              //       Navigator.pushAndRemoveUntil(
+                              //           context,
+                              //           MaterialPageRoute(
+                              //               builder: (_) => HomeView()),
+                              //           (route) => false);
+                              //     });
+                              //   } catch (e) {
+                              //     showTopSnackBar(
+                              //       Overlay.of(context),
+                              //       CustomSnackBar.error(
+                              //         message: e.toString(),
+                              //       ),
+                              //     );
+                              //   }
+                              // }
                             }
                           }),
                     ],
