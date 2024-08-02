@@ -3,8 +3,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fitness/view/home/widgets/add_workouts.dart';
 import 'package:fitness/view/home/widgets/view_workouts.dart';
-import 'package:fitness/view/income_expenses/add_income.dart';
-import 'package:fitness/view/income_expenses/view_income.dart';
 import 'package:flutter/material.dart';
 import '../../common/colo_extension.dart';
 import '../drawer.dart';

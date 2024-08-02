@@ -23,9 +23,9 @@ class _IncExpScreenState extends State<IncExpScreen> {
       appBar: AppBar(
         backgroundColor: TColor.secondaryColor,
         elevation: 0.0,
-        title: Text('Revenue & Expenses'),
+        title: const Text('Revenue & Expenses'),
       ),
-      drawer: AppDrawer(),
+      drawer: const AppDrawer(),
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -33,7 +33,7 @@ class _IncExpScreenState extends State<IncExpScreen> {
               children: [
                 Card(
                   elevation: 5,
-                  margin: EdgeInsets.all(8.0),
+                  margin: const EdgeInsets.all(8.0),
                   color: Colors.grey[350],
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.0),
@@ -42,14 +42,14 @@ class _IncExpScreenState extends State<IncExpScreen> {
                     children: [
                       Image.asset( 'assets/images/increase_presentation_Profit_growth-512.png', width: 84.0,),
 
-                      Text('Incomes', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20.0),),
+                      const Text('Incomes', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20.0),),
 
                       ElevatedButton( style: ButtonStyle( backgroundColor: MaterialStateProperty.all(TColor.secondaryColor),),
                         onPressed: () {
                         Navigator.push( context, MaterialPageRoute( builder: (context) => ViewIncome()));
                         },
 
-                        child: Row( mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+                        child: const Row( mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
                             Icon( Icons.list_alt, color: Colors.white, size: 40.0,),
 
                             Text( 'View Incomes', style: TextStyle( fontSize: 20, fontWeight: FontWeight.w700, color: Colors.white,),),
@@ -61,7 +61,7 @@ class _IncExpScreenState extends State<IncExpScreen> {
                           Navigator.push( context, MaterialPageRoute( builder: (context) => AddIncome(),),);
                         },
 
-                        child: Row( mainAxisAlignment: MainAxisAlignment.center,
+                        child: const Row( mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
 
                             Icon( Icons.add_circle_outline,  color: Colors.white, size: 40.0,),
@@ -75,7 +75,7 @@ class _IncExpScreenState extends State<IncExpScreen> {
                 ),
                 Card(
                   elevation: 5,
-                  margin: EdgeInsets.all(8.0),
+                  margin: const EdgeInsets.all(8.0),
                   color: Colors.grey[350],
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.0),
@@ -86,7 +86,7 @@ class _IncExpScreenState extends State<IncExpScreen> {
                         'assets/images/decrease_presentation_down_loss-512.png',
                         width: 84.0,
                       ),
-                      Text(
+                      const Text(
                         'Expenses',
                         style: TextStyle(
                             color: Colors.black,
@@ -106,7 +106,7 @@ class _IncExpScreenState extends State<IncExpScreen> {
                             ),
                           );
                         },
-                        child: Row(
+                        child: const Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Icon(
@@ -141,7 +141,7 @@ class _IncExpScreenState extends State<IncExpScreen> {
                             ),
                           );
                         },
-                        child: Row(
+                        child: const Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Icon(
@@ -165,7 +165,7 @@ class _IncExpScreenState extends State<IncExpScreen> {
                 ),
                 Card(
                   elevation: 5,
-                  margin: EdgeInsets.all(8.0),
+                  margin: const EdgeInsets.all(8.0),
                   color: Colors.grey[350],
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.0),
@@ -174,14 +174,14 @@ class _IncExpScreenState extends State<IncExpScreen> {
                     children: [
                       Image.asset( 'assets/images/subscription.png', width: 84.0,),
 
-                      Text('Packages', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20.0),),
+                      const Text('Packages', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20.0),),
 
                       ElevatedButton( style: ButtonStyle( backgroundColor: MaterialStateProperty.all(TColor.secondaryColor),),
                         onPressed: () {
                           Navigator.push( context, MaterialPageRoute( builder: (context) => ViewPackages()));
                         },
 
-                        child: Row( mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+                        child: const Row( mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
                           Icon( Icons.list_alt, color: Colors.white, size: 40.0,),
 
                           Text( 'View Incomes', style: TextStyle( fontSize: 20, fontWeight: FontWeight.w700, color: Colors.white,),),
@@ -193,7 +193,7 @@ class _IncExpScreenState extends State<IncExpScreen> {
                           Navigator.push( context, MaterialPageRoute( builder: (context) => AddPackages(),),);
                         },
 
-                        child: Row( mainAxisAlignment: MainAxisAlignment.center,
+                        child: const Row( mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
 
                             Icon( Icons.add_circle_outline,  color: Colors.white, size: 40.0,),

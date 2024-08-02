@@ -6,7 +6,6 @@ import 'package:fitness/components/round_textfield.dart';
 import 'package:fitness/view/Authentication/ForgotScreen/forgot_screen.dart';
 import 'package:fitness/view/Authentication/RegisterScreen/signup_view.dart';
 import 'package:fitness/view/dashboard/navigator.dart';
-import 'package:fitness/view/home/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:top_snackbar_flutter/custom_snack_bar.dart';
@@ -101,7 +100,7 @@ class _LoginViewState extends State<LoginView> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (_) => ForgotScreen()));
+                                      builder: (_) => const ForgotScreen()));
                             },
                             child: Text(
                               "Forgot your password?",
@@ -176,7 +175,7 @@ class _LoginViewState extends State<LoginView> {
                 TextButton(
                   onPressed: () {
                        Navigator.push(context,
-                        MaterialPageRoute(builder: (_) => SignUpView()));
+                        MaterialPageRoute(builder: (_) => const SignUpView()));
                   },
                   child: Row(
                     mainAxisSize: MainAxisSize.min,

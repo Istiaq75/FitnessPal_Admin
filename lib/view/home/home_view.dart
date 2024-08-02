@@ -108,7 +108,7 @@ class _HomeViewState extends State<HomeView> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => ProfileView(),
+                              builder: (context) => const ProfileView(),
                             ),
                           );
                         },
@@ -157,8 +157,8 @@ class _HomeViewState extends State<HomeView> {
                 //   ],
                 // ),
                 Container(
-                  margin: EdgeInsets.only(top: 50.0),
-                  padding: EdgeInsets.only(top: 10.0, bottom: 40.0),
+                  margin: const EdgeInsets.only(top: 50.0),
+                  padding: const EdgeInsets.only(top: 10.0, bottom: 40.0),
                   decoration: BoxDecoration(
                     color: Colors.blue[50],
                   ),

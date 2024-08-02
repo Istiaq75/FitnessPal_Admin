@@ -219,7 +219,7 @@ class _CompleteProfileViewState extends State<CompleteProfileView> {
                                           })
                                           .then((value) => showTopSnackBar(
                                                 Overlay.of(context),
-                                                CustomSnackBar.success(
+                                                const CustomSnackBar.success(
                                                   message:
                                                       "Complete Profile Successfully",
                                                 ),
@@ -232,7 +232,7 @@ class _CompleteProfileViewState extends State<CompleteProfileView> {
                                     } catch (e) {
                                       showTopSnackBar(
                                         Overlay.of(context),
-                                        CustomSnackBar.success(
+                                        const CustomSnackBar.success(
                                           message: "Something is wrong",
                                         ),
                                       );

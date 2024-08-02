@@ -83,7 +83,7 @@ class _ExcerciseState extends State<Excercise> {
                       int index = entry.key;
                       String name = entry.value.toString();
                       String url = urls[index].toString();
-                      String sub_name = subname[index].toString();
+                      String subName = subname[index].toString();
 
                       return Container(
                         decoration: BoxDecoration(
@@ -110,7 +110,7 @@ class _ExcerciseState extends State<Excercise> {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            subtitle: Text(sub_name,
+                            subtitle: Text(subName,
                                 style: TextStyle(
                                     fontSize: 15,
                                     fontWeight: FontWeight.normal)),

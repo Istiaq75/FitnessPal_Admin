@@ -84,7 +84,7 @@ class _WelcomeViewState extends State<WelcomeView> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => HomeView()));
+                                    builder: (context) => const HomeView()));
                           }),
                       SizedBox(
                         height: 20.h,

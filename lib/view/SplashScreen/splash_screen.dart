@@ -50,7 +50,7 @@ class _SplashScreenState extends State<SplashScreen> {
           } else {
             Navigator.pushAndRemoveUntil(
                 context,
-                MaterialPageRoute(builder: (_) => HomeView()),
+                MaterialPageRoute(builder: (_) => const HomeView()),
                     (route) => false);
           }
         }

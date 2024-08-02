@@ -27,7 +27,7 @@ class BottomBar extends StatelessWidget {
             SizedBox(
               height: 50.0,
               width: MediaQuery.of(context).size.width /2 - 40.0,
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   Icon(Icons.home,color: Colors.yellow, size: 35,),
@@ -38,7 +38,7 @@ class BottomBar extends StatelessWidget {
             SizedBox(
               height: 50.0,
               width: MediaQuery.of(context).size.width /2 - 40.0,
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   Icon(Icons.notifications_none,color: Colors.grey, size: 35,),

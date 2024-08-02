@@ -2,7 +2,6 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:top_snackbar_flutter/custom_snack_bar.dart';
@@ -133,11 +132,11 @@ class _AddEquipmentsState extends State<AddEquipments> {
                                 initialDate: DateTime.now(),
                                 firstDate: DateTime(2001),
                                 lastDate: DateTime(2100),
-                              ).then((_dateTime) {
+                              ).then((dateTime) {
                                 setState(() {
                                   servdateController.text =
                                       DateFormat('yyyy-MM-dd')
-                                          .format(_dateTime!);
+                                          .format(dateTime!);
                                 });
                               });
                             },

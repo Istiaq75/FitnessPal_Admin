@@ -54,17 +54,17 @@ class DailyTip extends StatelessWidget {
             vertical: 5.0,
             horizontal: 15.0,
           ),
-          child: Text(
-            'More',
-            style: TextStyle(
-              color: Colors.white,
-            ),
-          ),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.all(
               Radius.circular(20.0),
             ),
             color: Colors.lightBlue,
+          ),
+          child: Text(
+            'More',
+            style: TextStyle(
+              color: Colors.white,
+            ),
           ),
         ),
       ],
