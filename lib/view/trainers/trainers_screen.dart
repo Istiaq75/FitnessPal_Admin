@@ -166,26 +166,6 @@ class _TrainersScreenState extends State<TrainersScreen> {
                                           )
                                           .toString()
                                     });
-                                    // _expenseRef
-                                    //     .child(
-                                    //       DateFormat('yyyy-MM-dd')
-                                    //           .format(today),
-                                    //     )
-                                    //     .push()
-                                    //     .set(
-                                    //   {
-                                    //     'Title':
-                                    //         '${data['Name'].toString()}\'s Trainer Fee',
-                                    //     'Amount': salary,
-                                    //     'Date': DateFormat('yyyy-MM-dd').format(
-                                    //       date.add(
-                                    //         Duration(days: 30),
-                                    //       ),
-                                    //     ),
-                                    //     'Details':
-                                    //         'Name: ${data['Name'].toString()}\nID: ${""}\nTrainer\'s Monthly Fee',
-                                    //   },
-                                    // );
                                     Navigator.pop(context);
                                   },
                                   color: Color.fromRGBO(0, 179, 134, 1.0),

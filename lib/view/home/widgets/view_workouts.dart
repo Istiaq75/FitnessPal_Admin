@@ -1,4 +1,3 @@
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fitness/common/colo_extension.dart';
 import 'package:fitness/components/Section.dart';
@@ -6,7 +5,7 @@ import 'package:fitness/components/image_card_with_internal.dart';
 import 'package:fitness/view/drawer.dart';
 import 'package:flutter/material.dart';
 
-import 'package:url_launcher/url_launcher.dart' as UrlLauncher;
+import 'package:url_launcher/url_launcher.dart' as url_launcher;
 
 
 
@@ -37,7 +36,7 @@ class _ViewWorkoutsState extends State<ViewWorkouts> {
 
       var widget = InkWell(
         onTap: () {
-          UrlLauncher.launch(url.toString());
+          url_launcher.launch(url.toString());
         },
         child: ImageCardWithInternal(
           image: image,
@@ -60,9 +59,9 @@ class _ViewWorkoutsState extends State<ViewWorkouts> {
       appBar: AppBar(
           backgroundColor: TColor.secondaryColor,
           elevation: 0.0,
-          title: const Text("View Workouts"),
+          title: const Text("View Workouts",style: TextStyle(color: Colors.white),),
           leading: IconButton(
-            icon: const Icon(Icons.arrow_back_ios),
+            icon: const Icon(Icons.arrow_back_ios,color: Colors.white),
             iconSize: 28.0,
             onPressed: () {
               Navigator.pop(context);
@@ -72,48 +71,13 @@ class _ViewWorkoutsState extends State<ViewWorkouts> {
       body: SafeArea(
         child: Column(
           children: [
-            Container(
-              padding: const EdgeInsets.all(20.0),
-              decoration: BoxDecoration(
-                color: TColor.secondaryColor,
-                borderRadius: const BorderRadius.only(
-                  bottomLeft: Radius.circular(40.0),
-                  bottomRight: Radius.circular(40.0),
-                ),
-              ),
-              child: Row(
-                children: [
-                  Flexible(
-                    child: Container(
-                      width: MediaQuery.of(context).size.width,
-                      decoration: BoxDecoration(
-                        color: Colors.grey[350],
-                        borderRadius: BorderRadius.circular(15.0),
-                      ),
-                      child: TextField(
-                        onChanged: (value) => {},
-                        decoration: const InputDecoration(
-                          enabledBorder: InputBorder.none,
-                          focusedBorder: InputBorder.none,
-                          hintText: 'Search',
-                          prefixIcon: Icon(
-                            Icons.search,
-                          ),
-                          contentPadding: EdgeInsets.only(top: 15.0),
-                        ),
-                      ),
-                    ),
-                  )
-                ],
-              ),
-            ),
             Column(
               children: [
                 FutureBuilder<List<Widget>>(
                   future: getSlider(context, 'Loose'),
                   builder: (context, snapshot) {
                     if (snapshot.connectionState == ConnectionState.waiting) {
-                      return const CircularProgressIndicator(color: Colors.black);
+                      return const Center(child: CircularProgressIndicator(color: Colors.black));
                     } else if (snapshot.hasError) {
                       return Text('Error: ${snapshot.error}');
                     } else {
@@ -130,7 +94,7 @@ class _ViewWorkoutsState extends State<ViewWorkouts> {
                   future: getSlider(context, 'Maintain'),
                   builder: (context, snapshot) {
                     if (snapshot.connectionState == ConnectionState.waiting) {
-                      return const CircularProgressIndicator(color: Colors.black);
+                      return const Center(child: CircularProgressIndicator(color: Colors.black));
                     } else if (snapshot.hasError) {
                       return Text('Error: ${snapshot.error}');
                     } else {
@@ -147,7 +111,7 @@ class _ViewWorkoutsState extends State<ViewWorkouts> {
                   future: getSlider(context, 'Gain'),
                   builder: (context, snapshot) {
                     if (snapshot.connectionState == ConnectionState.waiting) {
-                      return const CircularProgressIndicator(color: Colors.black);
+                      return const Center(child: CircularProgressIndicator(color: Colors.black));
                     } else if (snapshot.hasError) {
                       return Text('Error: ${snapshot.error}');
                     } else {

@@ -1,5 +1,3 @@
-// ignore_for_file: use_key_in_widget_constructors, sort_child_properties_last, unnecessary_this, prefer_const_constructors
-
 import 'package:flutter/material.dart';
 
 class ImageCardWithInternal extends StatelessWidget {
@@ -15,6 +13,19 @@ class ImageCardWithInternal extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
+      width: size.width * 0.85,
+      height: size.width * 0.40,
+      padding: EdgeInsets.all(20.0),
+      margin: EdgeInsets.only(right: 15.0),
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: NetworkImage(this.image,),
+          fit: BoxFit.cover,
+        ),
+        borderRadius: BorderRadius.all(
+          Radius.circular(15.0),
+        ),
+      ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,19 +58,6 @@ class ImageCardWithInternal extends StatelessWidget {
             ),
           ),
         ],
-      ),
-      width: size.width * 0.85,
-      height: size.width * 0.40,
-      padding: EdgeInsets.all(20.0),
-      margin: EdgeInsets.only(right: 15.0),
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: NetworkImage(this.image),
-          fit: BoxFit.cover,
-        ),
-        borderRadius: BorderRadius.all(
-          Radius.circular(15.0),
-        ),
       ),
     );
   }
